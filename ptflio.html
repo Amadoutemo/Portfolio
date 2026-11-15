@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio BTS SIO SISR — Amadou TEMO</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-hover: #3b82f6;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --emerald: #059669;
+      --emerald-light: #ecfdf5;
+      --amber: #d97706;
+      --amber-light: #fffbeb;
+      --purple: #7c3aed;
+      --purple-light: #f5f3ff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      padding: 14px 26px;
+      border-radius: 14px;
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 15px;
+      z-index: 100;
+      margin-bottom: 50px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.93rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Boutons */
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.94rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-emerald {
+      background: var(--emerald);
+      color: #ffffff;
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.94rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-emerald:hover {
+      background: #047857;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text);
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.94rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 75px;
+      padding: 20px 0;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--emerald-light);
+      border: 1px solid #a7f3d0;
+      color: var(--emerald);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.18;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #2563eb, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 30px auto;
+      color: var(--text-muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Titres de sections */
+    .section-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      margin-bottom: 26px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    /* Parcours Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 75px;
+    }
+
+    .time-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 22px 24px;
+      display: flex;
+      gap: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .time-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+
+    .time-period {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 6px;
+      height: fit-content;
+      min-width: 115px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .time-info h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .time-sub {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .time-desc {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    /* Grilles & Cartes */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 22px;
+      margin-bottom: 75px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 22px;
+      margin-bottom: 75px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s;
+    }
+
+    .card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+    }
+
+    .icon-blue { background: var(--primary-light); color: var(--primary); }
+    .icon-emerald { background: var(--emerald-light); color: var(--emerald); }
+    .icon-amber { background: var(--amber-light); color: var(--amber); }
+    .icon-purple { background: var(--purple-light); color: var(--purple); }
+
+    .card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .card-list {
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .card-list li {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      margin-bottom: 9px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .card-list i {
+      color: var(--emerald);
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+
+    /* Filtres Projets */
+    .filters {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+    }
+    .tag-stage { background: var(--primary-light); color: var(--primary); }
+    .tag-tp { background: var(--purple-light); color: var(--purple); }
+    .tag-asso { background: var(--emerald-light); color: var(--emerald); }
+    .tag-univ { background: var(--amber-light); color: var(--amber); }
+
+    .tech-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      padding: 3px 9px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+
+    .btn-detail {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      margin-top: 16px;
+      padding: 0;
+      font-family: inherit;
+    }
+
+    .btn-detail:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    /* Veille Articles */
+    .veille-header-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--emerald);
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+
+    .article-source {
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Documents E5 Banner */
+    .docs-banner {
+      background: linear-gradient(135deg, #eff6ff 0%, #ecfdf5 100%);
+      border: 1px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      max-width: 600px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 25px 50px rgba(15, 23, 42, 0.25);
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .modal-close {
+      background: #f1f5f9;
+      border: none;
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      background: #e2e8f0;
+      color: var(--text);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .contact-tile {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s;
+    }
+
+    .contact-tile:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-tile i {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .contact-lbl {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-val {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.1rem; }
+      .time-card { flex-direction: column; gap: 10px; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <nav>
+      <div class="brand">
+        <div class="brand-dot"></div>
+        Amadou TEMO
+      </div>
+      <ul class="nav-links">
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#projets">Réalisations</a></li>
+        <li><a href="#veille">Veille Tech</a></li>
+        <li><a href="#documents">Documents</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#documents" class="btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">
+        <i class="fa-solid fa-file-arrow-down"></i> Dossier E5
+      </a>
+    </nav>
+
+    <header class="hero">
+      <div class="badge-status">
+        <i class="fa-solid fa-circle-check"></i> Candidat BTS SIO — Option SISR (Session 2026)
+      </div>
+      <h1>
+        Etudiant informatique<br>
+        <span>En Services d'Infrastructure Systèmes &amp; Réseaux</span>
+      </h1>
+      <p>
+        Étudiant de 21 ans en BTS SIO (option SISR) à l'École Vidal de Toulouse. Je développe mes compétences en maintenance matérielle, support technique et administration systèmes & réseaux.
+      <div class="hero-cta">
+        <a href="#projets" class="btn-primary">
+          <i class="fa-solid fa-server"></i> Voir mes réalisations SISR
+        </a>
+        <a href="CV AMADOU BTS.pdf" target="_blank" class="btn-secondary">
+          <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
+        </a>
+      </div>
+    </header>
+
+    <section id="parcours">
+      <div class="section-title">
+        <i class="fa-solid fa-graduation-cap"></i> Parcours Académique
+      </div>
+      <div class="timeline">
+        <div class="time-card">
+          <div class="time-period">2025 - 2026</div>
+          <div class="time-info">
+            <h3>BTS Services Informatiques aux Organisations (SIO)</h3>
+            <div class="time-sub">École Vidal — Toulouse (Option SISR)</div>
+            <div class="time-desc">
+              Administration des systèmes Windows/Linux, conception et sécurisation d'infrastructures réseau, virtualisation, gestion de parc (GLPI) et support utilisateurs.
+            </div>
+          </div>
+        </div>
+
+        <div class="time-card">
+          <div class="time-period">2023 - 2025</div>
+          <div class="time-info">
+            <h3>Licence 1 Informatique</h3>
+            <div class="time-sub">Université Paul Sabatier — Toulouse III</div>
+            <div class="time-desc">
+              Bases solides en algorithmique, programmation orientée objet en Java et Python, initiation au langage C, et requêtage relationnel en bases de données SQL.
+            </div>
+          </div>
+        </div>
+
+        <div class="time-card">
+          <div class="time-period">2023</div>
+          <div class="time-info">
+            <h3>Baccalauréat Général</h3>
+            <div class="time-sub">Spécialités Mathématiques &amp; NSI (Numérique et Sciences Informatiques)</div>
+            <div class="time-desc">
+              Acquisition de la rigueur logique, de l'architecture des machines et des premiers projets logiciels.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences">
+      <div class="section-title">
+        <i class="fa-solid fa-microchip"></i> Compétences &amp; Atouts
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div>
+            <div class="card-icon icon-blue"><i class="fa-solid fa-server"></i></div>
+            <h3>Systèmes &amp; Réseaux</h3>
+            <ul class="card-list">
+              <li><i class="fa-solid fa-check"></i> Windows Server (AD DS, DNS, DHCP, GPO) &amp; Linux</li>
+              <li><i class="fa-solid fa-check"></i> Virtualisation (VMware / VirtualBox )</li>
+              <li><i class="fa-solid fa-check"></i> Adressage IP, VLANs, routage et pare-feu</li>
+              <li><i class="fa-solid fa-check"></i> Sécurisation, droits d'accès et sauvegardes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon icon-emerald"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <h3>Maintenance &amp; Support</h3>
+            <ul class="card-list">
+              <li><i class="fa-solid fa-check"></i> Montage, diagnostic et réparation hardware</li>
+              <li><i class="fa-solid fa-check"></i> Déploiement d'OS, pilotes et masterisation</li>
+              <li><i class="fa-solid fa-check"></i> Assistance utilisateurs (Support Niveau 1 &amp; 2)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="card-icon icon-amber"><i class="fa-solid fa-code"></i></div>
+            <h3>Dev, Outils &amp; Langues</h3>
+            <ul class="card-list">
+              <li><i class="fa-solid fa-check"></i> Scripting &amp; Code : Python, Java, C, SQL</li>
+              <li><i class="fa-solid fa-check"></i> Web : HTML5, CSS3, JavaScript &amp; Git/GitHub</li>
+              <li><i class="fa-solid fa-check"></i> Langues : <strong>Anglais avancé</strong> (lecture docs tech), Espagnol B1</li>
+              <li><i class="fa-solid fa-check"></i> Soft skills : Résolution de problèmes, esprit d'équipe, bénévolat actif</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="section-title">
+        <i class="fa-solid fa-diagram-project"></i> Réalisations Professionnelles &amp; TP SISR
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Toutes les réalisations</button>
+        <button class="filter-btn" data-filter="sys">Systèmes &amp; Réseaux (SISR)</button>
+        <button class="filter-btn" data-filter="web">Web &amp; Associatif</button>
+        <button class="filter-btn" data-filter="dev">Développement POO</button>
+      </div>
+
+      <div class="grid-3" id="projects-container">
+        
+        <!-- Projet 1 : Stage ITWORLD -->
+        <div class="card project-item" data-category="sys web">
+          <div>
+            <span class="tag tag-stage">Stage Entreprise (Janv - Avr 2026)</span>
+            <h3>ITWORLD — Maintenance &amp; Parc</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Stage de 4 mois : déploiement d'OS Windows/Linux, bancs d'essais hardware, montage de PC, support N1 et création du site vitrine.
+            </p>
+            <button class="btn-detail" onclick="showModal('Stage ITWORLD — Maintenance, Support & Web', '<strong>Contexte :</strong> Stage professionnel de 4 mois au sein d\'une société spécialisée dans les services et la maintenance informatique.<br><br><strong>Missions réalisées :</strong><br>• Installation et paramétrage d\'OS (Windows 10/11 et distributions Linux) sur postes clients.<br>• Configuration initiale : pilotes, suites bureautiques, antivirus et mises à jour critiques.<br>• Montage complet de PC fixes et reconditionnement d\'ordinateurs portables.<br>• Diagnostic matériel et tests de stress (RAM, stockage SSD/NVMe, alimentation).<br>• Conception et développement du site Internet vitrine de l\'entreprise.')">
+              Détails de la mission <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Windows/Linux</span>
+            <span class="pill">Hardware</span>
+            <span class="pill">Support N1</span>
+            <span class="pill">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Projet 2 : TP SISR Windows Server -->
+        <div class="card project-item" data-category="sys">
+          <div>
+            <span class="tag tag-tp">Atelier Pro SISR — École Vidal</span>
+            <h3>Infrastructure Windows Server &amp; AD</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Déploiement d'un contrôleur de domaine Active Directory, gestion des rôles DNS/DHCP et sécurisation des postes clients via GPO.
+            </p>
+            <button class="btn-detail" onclick="showModal('Déploiement Infrastructure Windows Server', '<strong>Objectif :</strong> Centraliser la gestion des utilisateurs et sécuriser le parc informatique d\'une PME simulée.<br><br><strong>Réalisations techniques :</strong><br>• Installation et promotion d\'un serveur sous Windows Server (rôle AD DS).<br>• Structuration de l\'annuaire en Unités d\'Organisation (OU) par service.<br>• Configuration des services réseau DNS (zones directe/inverses) et DHCP (étendues et baux).<br>• Déploiement de stratégies de groupe (GPO) : lecteurs réseau mappés, politique de mots de passe et restriction du panneau de configuration.<br>• Intégration des postes clients Windows au domaine et tests de validation.')">
+              Détails techniques <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Windows Server</span>
+            <span class="pill">Active Directory</span>
+            <span class="pill">DNS / DHCP</span>
+            <span class="pill">GPO</span>
+          </div>
+        </div>
+       <!-- Projet 4 : TP SISR Réseau & Sécurité -->
+        <div class="card project-item" data-category="sys">
+          <div>
+            <span class="tag tag-tp">Atelier Pro SISR — École Vidal</span>
+            <h3>Segmentation Réseau &amp; Pare-feu</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Architecture virtualisée cloisonnée avec création de VLANs, routage inter-VLAN et filtrage des flux via pare-feu pfSense.
+            </p>
+            <button class="btn-detail" onclick="showModal('Architecture Réseau Cloisonnée & Sécurisation', '<strong>Objectif :</strong> Isoler les différents services de l\'entreprise (Administration, Utilisateurs, DMZ) et contrôler l\'accès à Internet.<br><br><strong>Réalisations techniques :</strong><br>• Conception du plan d\'adressage IP et découpage en sous-réseaux (VLANs).<br>• Déploiement d\'un pare-feu/routeur pfSense en environnement virtualisé.<br>• Configuration des règles de filtrage (ACL), traduction d\'adresses (NAT/PAT) et portail captif.<br>• Tests de connectivité (ping, traceroute) et vérification du blocage des flux non autorisés.')">
+              Détails techniques <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">pfSense</span>
+            <span class="pill">VLANs</span>
+            <span class="pill">Routage / NAT</span>
+            <span class="pill">Virtualisation</span>
+          </div>
+        </div>
+
+        <!-- Projet 5 : Asso Bol d'Oxygène -->
+        <div class="card project-item" data-category="web">
+          <div>
+            <span class="tag tag-asso">Projet Associatif (2025)</span>
+            <h3>Site Web : BOL D'OXYGENE</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Conception et mise en ligne du site Internet bénévole de l'association BOL D'OXYGENE afin d'accroître leur visibilité locale.
+            </p>
+            <button class="btn-detail" onclick="showModal('Site Web — Association BOL D\'OXYGENE', 'Mission bénévole réalisée en juillet-août 2025 :<br><br>• Recueil des besoins auprès des membres du bureau de l\'association.<br>• Conception d\'une maquette claire, moderne et adaptée à la consultation sur smartphone (Responsive).<br>• Développement en HTML5, CSS3 et JavaScript.<br>• Mise en ligne, configuration de l\'hébergement et maintenance du contenu.')">
+              Détails du projet <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">HTML5 / CSS3</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Responsive</span>
+            <span class="pill">Bénévolat</span>
+          </div>
+        </div>
+
+        <!-- Projet 6 : Python & Java -->
+        <div class="card project-item" data-category="dev">
+          <div>
+            <span class="tag tag-univ">Université Paul Sabatier</span>
+            <h3>Développement POO (Python &amp; Java)</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Création d'un jeu de plateau en Python et projets modulaires en Java sous Eclipse avec gestion de versions Git/GitHub.
+            </p>
+            <button class="btn-detail" onclick="showModal('Développement Orienté Objet — Python & Java', 'Projets universitaires réalisés en 2025 :<br><br>• <strong>Jeu de plateau en Python :</strong> Développement en ligne de commande à partir d\'un cahier des charges strict (règles du jeu, gestion des tours, conditions de victoire).<br>• <strong>Projets Java sous Eclipse :</strong> Application des concepts d\'encapsulation, d\'héritage et de polymorphisme.<br>• <strong>Versionning :</strong> Utilisation quotidienne de Git et GitHub (branches, commits, gestion de dépôt).')">
+              Détails du projet <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Python 3</span>
+            <span class="pill">Java</span>
+            <span class="pill">POO</span>
+            <span class="pill">Git / GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="veille">
+      <div class="section-title">
+        <i class="fa-solid fa-rss"></i> Veille Technologique : Sécurisation des Infrastructures &amp; Zero Trust
+      </div>
+
+      <div class="veille-header-box">
+        <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text);">
+          <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--emerald); margin-right: 8px;"></i>
+          Thématique &amp; Méthodologie de surveillance
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.94rem; margin-bottom: 12px;">
+          Face à la multiplication des cyberattaques ciblant les PME et les accès distants, ma veille porte sur <strong>l'évolution des menaces sur les systèmes (Windows/Linux) et le déploiement de l'architecture Zero Trust</strong> (authentification multifacteur, segmentation réseau).
+        </p>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span class="pill"><i class="fa-solid fa-rss"></i> Flux RSS : Feedly</span>
+          <span class="pill"><i class="fa-solid fa-shield"></i> Alertes : CERT-FR / ANSSI</span>
+          <span class="pill"><i class="fa-solid fa-newspaper"></i> Sources : LeMagIT, ZDNet, IT-Connect</span>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">CERT-FR / ANSSI</span>
+              <span>Février 2026</span>
+            </div>
+            <h3>Failles critiques sur les passerelles VPN et accès distants</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Analyse des bulletins d'alerte concernant l'exploitation de vulnérabilités zero-day sur les équipements périmétriques. Importance de l'application rapide des correctifs et de la restriction des ports d'administration.
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">VPN</span>
+            <span class="pill">Patch Management</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">IT-Connect</span>
+              <span>Mars 2026</span>
+            </div>
+            <h3>Durcissement d'Active Directory face aux ransomwares</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Bonnes pratiques d'administration : séparation des comptes d'administration (modèle Tiering), désactivation des protocoles obsolètes (SMBv1) et mise en place de sauvegardes immuables hors-ligne (règle 3-2-1).
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Active Directory</span>
+            <span class="pill">Hardening</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">LeMagIT</span>
+              <span>Avril 2026</span>
+            </div>
+            <h3>Adoption du modèle Zero Trust dans les PME</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Remplacement progressif du périmètre réseau traditionnel par la vérification systématique de l'identité (MFA) et de l'état de conformité du terminal avant tout accès aux ressources internes.
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Zero Trust</span>
+            <span class="pill">MFA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="documents">
+      <div class="docs-banner">
+        <div>
+          <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">
+            Mon CV
+          </h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Consultez ou téléchargez mon CV actualisé.
+          </p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="CV_Amadou_TEMO.pdf" target="_blank" class="btn-primary">
+            <i class="fa-solid fa-file-pdf"></i> Télécharger le CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <i class="fa-solid fa-address-book"></i> Coordonnées &amp; Contact
+      </div>
+      <div class="contact-grid">
+        <a href="tel:0782743103" class="contact-tile">
+          <i class="fa-solid fa-phone"></i>
+          <span class="contact-lbl">Téléphone</span>
+          <span class="contact-val">07 82 74 31 03</span>
+        </a>
+
+        <a href="mailto:amadou.temo@gmail.com" class="contact-tile">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="contact-lbl">Email</span>
+          <span class="contact-val">amadou.temo@gmail.com</span>
+        </a>
+
+        <div class="contact-tile">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="contact-lbl">Localisation</span>
+          <span class="contact-val">Toulouse (31300)</span>
+        </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Amadou TEMO — Portfolio BTS SIO (Option SISR) — École Vidal Toulouse.
+    </footer>
+
+  </div>
+
+  <div id="modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modal-title" style="color: var(--text); font-size: 1.2rem; font-weight: 700;"></h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;"></div>
+    </div>
+  </div>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+
+    function showModal(title, text) {
+      modalTitle.innerText = title;
+      modalDesc.innerHTML = text;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

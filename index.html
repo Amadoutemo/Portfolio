@@ -306,13 +306,6 @@
       margin-bottom: 75px;
     }
 
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-      gap: 22px;
-      margin-bottom: 75px;
-    }
-
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -611,7 +604,6 @@
       .nav-links { display: none; }
       .hero h1 { font-size: 2.1rem; }
       .time-card { flex-direction: column; gap: 10px; }
-      .grid-2 { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -633,7 +625,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#documents" class="btn-primary" style="padding: 8px 16px; font-size: 0.88rem;">
-        <i class="fa-solid fa-file-arrow-down"></i> Dossier E5
+        <i class="fa-solid fa-file-arrow-down"></i> Documents E5
       </a>
     </nav>
 
@@ -642,16 +634,20 @@
         <i class="fa-solid fa-circle-check"></i> Candidat BTS SIO — Option SISR (Session 2026)
       </div>
       <h1>
-        Etudiant informatique<br>
-        <span>En Services d'Infrastructure Systèmes &amp; Réseaux</span>
+        Étudiant en informatique<br>
+        <span>Services d'Infrastructure, Systèmes &amp; Réseaux</span>
       </h1>
       <p>
-        Étudiant de 21 ans en BTS SIO (option SISR) à l'École Vidal de Toulouse. Je développe mes compétences en maintenance matérielle, support technique et administration systèmes & réseaux.
+        Étudiant de 21 ans en BTS SIO (option SISR) à l'École Vidal de Toulouse. Je développe mes compétences en maintenance matérielle, support technique et administration systèmes &amp; réseaux.
+      </p>
       <div class="hero-cta">
         <a href="#projets" class="btn-primary">
           <i class="fa-solid fa-server"></i> Voir mes réalisations SISR
         </a>
-        <a href="CV AMADOU BTS.pdf" target="_blank" class="btn-secondary">
+        <a href="Tableau_Synthese_E5.pdf" target="_blank" class="btn-emerald">
+          <i class="fa-solid fa-table-list"></i> Tableau de Synthèse (PDF)
+        </a>
+        <a href="CV_Amadou_TEMO.pdf" target="_blank" class="btn-secondary">
           <i class="fa-solid fa-file-pdf"></i> Télécharger mon CV
         </a>
       </div>
@@ -707,10 +703,10 @@
             <div class="card-icon icon-blue"><i class="fa-solid fa-server"></i></div>
             <h3>Systèmes &amp; Réseaux</h3>
             <ul class="card-list">
-              <li><i class="fa-solid fa-check"></i> Windows Server (AD DS, DNS, DHCP, GPO) &amp; Linux</li>
-              <li><i class="fa-solid fa-check"></i> Virtualisation (VMware / VirtualBox )</li>
-              <li><i class="fa-solid fa-check"></i> Adressage IP, VLANs, routage et pare-feu</li>
-              <li><i class="fa-solid fa-check"></i> Sécurisation, droits d'accès et sauvegardes</li>
+              <li><i class="fa-solid fa-check"></i> Windows Server (bases AD DS, DNS, DHCP) &amp; Linux Ubuntu</li>
+              <li><i class="fa-solid fa-check"></i> Simulation réseau sous Cisco Packet Tracer (IP, DHCP, Wi-Fi)</li>
+              <li><i class="fa-solid fa-check"></i> Accès distant &amp; diagnostic : PuTTY (SSH), Nmap, Wireshark</li>
+              <li><i class="fa-solid fa-check"></i> Virtualisation (VMware / VirtualBox)</li>
             </ul>
           </div>
         </div>
@@ -734,7 +730,7 @@
             <ul class="card-list">
               <li><i class="fa-solid fa-check"></i> Scripting &amp; Code : Python, Java, C, SQL</li>
               <li><i class="fa-solid fa-check"></i> Web : HTML5, CSS3, JavaScript &amp; Git/GitHub</li>
-              <li><i class="fa-solid fa-check"></i> Langues : <strong>Anglais avancé</strong> (lecture docs tech), Espagnol B1</li>
+              <li><i class="fa-solid fa-check"></i> Langues : Anglais B2 , Espagnol A2</li>
               <li><i class="fa-solid fa-check"></i> Soft skills : Résolution de problèmes, esprit d'équipe, bénévolat actif</li>
             </ul>
           </div>
@@ -795,27 +791,48 @@
             <span class="pill">GPO</span>
           </div>
         </div>
-       <!-- Projet 4 : TP SISR Réseau & Sécurité -->
+
+<!-- Projet 3 : TP SISR Cisco Packet Tracer -->
         <div class="card project-item" data-category="sys">
           <div>
             <span class="tag tag-tp">Atelier Pro SISR — École Vidal</span>
-            <h3>Segmentation Réseau &amp; Pare-feu</h3>
+            <h3>Simulation Réseau &amp; Routage (Packet Tracer)</h3>
             <p style="color: var(--text-muted); font-size: 0.92rem;">
-              Architecture virtualisée cloisonnée avec création de VLANs, routage inter-VLAN et filtrage des flux via pare-feu pfSense.
+              Conception et simulation d'architectures réseau sous Cisco Packet Tracer : câblage, adressage IP, DHCP et accès Wi-Fi.
             </p>
-            <button class="btn-detail" onclick="showModal('Architecture Réseau Cloisonnée & Sécurisation', '<strong>Objectif :</strong> Isoler les différents services de l\'entreprise (Administration, Utilisateurs, DMZ) et contrôler l\'accès à Internet.<br><br><strong>Réalisations techniques :</strong><br>• Conception du plan d\'adressage IP et découpage en sous-réseaux (VLANs).<br>• Déploiement d\'un pare-feu/routeur pfSense en environnement virtualisé.<br>• Configuration des règles de filtrage (ACL), traduction d\'adresses (NAT/PAT) et portail captif.<br>• Tests de connectivité (ping, traceroute) et vérification du blocage des flux non autorisés.')">
+            <button class="btn-detail" onclick="showModal('Simulation Réseau sous Cisco Packet Tracer', '<strong>Objectif :</strong> Comprendre le fonctionnement des équipements réseau et valider la connectivité entre plusieurs postes.<br><br><strong>Réalisations techniques :</strong><br>• Mise en place de topologies réseau (PC, Laptops, switchs, routeurs sans fil, modem câble).<br>• Configuration de l\'adressage IP statique et dynamique (serveur DHCP) et paramétrage Wi-Fi (SSID).<br>• Réalisation du câblage logique (câbles droits, croisés, coaxiaux) selon les interfaces.<br>• Tests de connectivité et diagnostic de base (commandes ping, ipconfig).')">
               Détails techniques <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
           <div class="tech-pills">
-            <span class="pill">pfSense</span>
-            <span class="pill">VLANs</span>
-            <span class="pill">Routage / NAT</span>
-            <span class="pill">Virtualisation</span>
+            <span class="pill">Packet Tracer</span>
+            <span class="pill">Adressage IP</span>
+            <span class="pill">DHCP / Wi-Fi</span>
+            <span class="pill">Ping</span>
           </div>
         </div>
 
-        <!-- Projet 5 : Asso Bol d'Oxygène -->
+        <!-- Projet 4 : TP SISR Linux, SSH & Analyse Réseau -->
+        <div class="card project-item" data-category="sys">
+          <div>
+            <span class="tag tag-tp">Atelier Pro SISR — École Vidal</span>
+            <h3>Administration Linux &amp; Diagnostic Réseau</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">
+              Prise en main de Linux Ubuntu en ligne de commande, accès distant sécurisé via PuTTY (SSH), scan réseau avec Nmap et analyse de trames Wireshark.
+            </p>
+            <button class="btn-detail" onclick="showModal('Administration Linux Ubuntu & Outils Réseau', '<strong>Objectif :</strong> Administrer un poste sous Linux en terminal et analyser les flux circulant sur le réseau.<br><br><strong>Réalisations techniques :</strong><br>• <strong>Linux Ubuntu :</strong> Utilisation des commandes de base en terminal (navigation, gestion des fichiers/dossiers, droits utilisateurs chmod/chown, gestion des paquets apt).<br>• <strong>Accès distant :</strong> Connexion et administration à distance d\'une machine via PuTTY (protocole SSH).<br>• <strong>Audit & Analyse :</strong> Découverte d\'hôtes et scan de ports ouverts avec Nmap ; capture et lecture de paquets réseau avec Wireshark.')">
+              Détails techniques <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Linux Ubuntu</span>
+            <span class="pill">PuTTY / SSH</span>
+            <span class="pill">Nmap</span>
+            <span class="pill">Wireshark</span>
+          </div>
+        </div>
+
+        <!-- Projet 4 : Asso Bol d'Oxygène -->
         <div class="card project-item" data-category="web">
           <div>
             <span class="tag tag-asso">Projet Associatif (2025)</span>
@@ -835,7 +852,7 @@
           </div>
         </div>
 
-        <!-- Projet 6 : Python & Java -->
+        <!-- Projet 5 : Python & Java -->
         <div class="card project-item" data-category="dev">
           <div>
             <span class="tag tag-univ">Université Paul Sabatier</span>
@@ -858,25 +875,80 @@
       </div>
     </section>
 
-    <section id="veille">
+
+      <section id="veille">
       <div class="section-title">
-        <i class="fa-solid fa-rss"></i> Veille Technologique : Sécurisation des Infrastructures &amp; Zero Trust
+        <i class="fa-solid fa-rss"></i> Veille Technologique : Les Ransomwares et les Sauvegardes
       </div>
 
       <div class="veille-header-box">
         <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text);">
-          <i class="fa-solid fa-magnifying-glass-chart" style="color: var(--emerald); margin-right: 8px;"></i>
-          Thématique &amp; Méthodologie de surveillance
+          <i class="fa-solid fa-shield-halved" style="color: var(--emerald); margin-right: 8px;"></i>
+          Thématique &amp; Outils de veille
         </h3>
         <p style="color: var(--text-muted); font-size: 0.94rem; margin-bottom: 12px;">
-          Face à la multiplication des cyberattaques ciblant les PME et les accès distants, ma veille porte sur <strong>l'évolution des menaces sur les systèmes (Windows/Linux) et le déploiement de l'architecture Zero Trust</strong> (authentification multifacteur, segmentation réseau).
+          Les attaques par rançongiciel (ransomware) touchent de plus en plus les entreprises et bloquent leurs fichiers. Ma veille porte sur <strong>les bonnes pratiques simples pour protéger les postes de travail et sauvegarder les données efficacement</strong>.
         </p>
         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-          <span class="pill"><i class="fa-solid fa-rss"></i> Flux RSS : Feedly</span>
-          <span class="pill"><i class="fa-solid fa-shield"></i> Alertes : CERT-FR / ANSSI</span>
-          <span class="pill"><i class="fa-solid fa-newspaper"></i> Sources : LeMagIT, ZDNet, IT-Connect</span>
+          <span class="pill"><i class="fa-solid fa-rss"></i> Agrégateur : Feedly</span>
+          <span class="pill"><i class="fa-solid fa-shield"></i> Site officiel : Cybermalveillance.gouv.fr</span>
+          <span class="pill"><i class="fa-solid fa-newspaper"></i> Presse : ZDNet / IT-Connect</span>
         </div>
       </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">Cybermalveillance.gouv.fr</span>
+              <span>Janvier 2026</span>
+            </div>
+            <h3>Comment éviter les infections par Ransomware ?</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              La majorité des attaques arrivent par des mails piégés (phishing) ou des logiciels pas à jour. Les solutions principales sont : faire les mises à jour Windows/Linux régulièrement, installer un antivirus et sensibiliser les utilisateurs.
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Phishing</span>
+            <span class="pill">Mises à jour</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">IT-Connect</span>
+              <span>Février 2026</span>
+            </div>
+            <h3>La règle de sauvegarde 3-2-1 expliquée</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Pour ne jamais perdre ses données en cas de panne ou de piratage, il faut conserver <strong>3 copies</strong> des données, sur <strong>2 supports différents</strong> (ex : disque interne + NAS), dont <strong>1 copie hors-ligne ou à distance</strong> (cloud ou disque débranché).
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Sauvegarde</span>
+            <span class="pill">Règle 3-2-1</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="article-meta">
+              <span class="article-source">ZDNet France</span>
+              <span>Mars 2026</span>
+            </div>
+            <h3>L'importance des mises à jour de sécurité (Windows 10/11)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Avec la fin du support de Windows 10 et la sortie régulière de correctifs critiques, maintenir les postes clients à jour est indispensable pour corriger les failles de sécurité avant qu'elles ne soient exploitées.
+            </p>
+          </div>
+          <div class="tech-pills">
+            <span class="pill">Windows</span>
+            <span class="pill">Correctifs</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <div class="grid-3">
         <div class="card">
@@ -936,13 +1008,16 @@
       <div class="docs-banner">
         <div>
           <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">
-            Mon CV
+            Documents Officiels — Épreuve E5
           </h2>
           <p style="color: var(--text-muted); font-size: 0.95rem;">
-            Consultez ou téléchargez mon CV actualisé.
+            Consultez ou téléchargez mon Tableau de Synthèse des réalisations professionnelles ainsi que mon CV actualisé.
           </p>
         </div>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="Tableau_Synthese_E5.pdf" target="_blank" class="btn-emerald">
+            <i class="fa-solid fa-table-list"></i> Tableau de Synthèse (PDF)
+          </a>
           <a href="CV_Amadou_TEMO.pdf" target="_blank" class="btn-primary">
             <i class="fa-solid fa-file-pdf"></i> Télécharger le CV
           </a>
@@ -972,6 +1047,7 @@
           <span class="contact-lbl">Localisation</span>
           <span class="contact-val">Toulouse (31300)</span>
         </div>
+      </div>
     </section>
 
     <footer>
